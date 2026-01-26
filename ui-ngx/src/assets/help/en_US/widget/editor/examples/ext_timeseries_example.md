@@ -3,7 +3,7 @@
 <div class="divider"></div>
 <br/>
 
-In this example, **Time-Series** line chart widget will be created using external [Chart.js{:target="_blank"}](https://www.chartjs.org/) library.
+In this example, **Time-Series** line chart widget will be created using external [Chart.js](https://www.chartjs.org/) library.
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen, then click the “Create new widget type” button.<br>
 Click the **Time-Series** button on the **Select widget type** popup.<br>

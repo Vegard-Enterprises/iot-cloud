@@ -3,7 +3,7 @@
 <div class="divider"></div>
 <br/>
 
-In this example, **Latest Values** gauge widget will be created using external [gauge.js{:target="_blank"}](http://bernii.github.io/gauge.js/) library.
+In this example, **Latest Values** gauge widget will be created using external [gauge.js](http://bernii.github.io/gauge.js/) library.
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen, then click the “Create new widget type” button.<br>
 Click the **Latest Values** button on the **Select widget type** popup.<br>
