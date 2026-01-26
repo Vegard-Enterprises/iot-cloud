@@ -5,7 +5,7 @@
 
 *function Switch(msg, metadata, msgType): string[]*
 
-[TBEL{:target="_blank"}](${siteBaseUrl}/docs${docPlatformPrefix}/user-guide/tbel/) function computing **an array of Link names** to forward the incoming Message.
+[TBEL](${siteBaseUrl}/docs${docPlatformPrefix}/user-guide/tbel/) function computing **an array of Link names** to forward the incoming Message.
 
 **Parameters:**
 

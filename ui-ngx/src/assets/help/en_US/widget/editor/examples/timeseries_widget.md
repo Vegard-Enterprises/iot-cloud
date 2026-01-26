@@ -81,7 +81,7 @@ In this example, the <span trigger-style="fontSize: 16px;" trigger-text="<b>subs
 
 The **$scope.datasourceData** property is introduced to map datasource specific dataKeys data by datasource index for flexible access within the HTML template.
 
-Inside the HTML, a special [***ngFor**{:target="_blank"}](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available datasources and render corresponding tabs.
+Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available datasources and render corresponding tabs.
 
 Inside each tab, the table is rendered using dataKeys obtained from **datasourceData** scope property accessed by datasource index.<br>
 

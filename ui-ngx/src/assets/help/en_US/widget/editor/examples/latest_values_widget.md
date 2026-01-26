@@ -41,7 +41,7 @@ The **Widget Editor** will open, pre-populated with the content of the default *
 
 In this example, the **data** property of <span trigger-style="fontSize: 16px;" trigger-text="<b>subscription</b>" tb-help-popup="widget/editor/widget_js_subscription_object"></span> is assigned to the **$scope** and becomes accessible within the HTML template.
 
-Inside the HTML, a special [***ngFor**{:target="_blank"}](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available dataKeys & datapoints then render latest values with their corresponding timestamps. 
+Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available dataKeys & datapoints then render latest values with their corresponding timestamps. 
 
 <br/>
 <br/>

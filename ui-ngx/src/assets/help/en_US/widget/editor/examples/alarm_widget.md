@@ -124,11 +124,11 @@ self.onDataUpdated = function() {
 
 In this example, the **alarmSource** and **alarms** properties of <span trigger-style="fontSize: 16px;" trigger-text="<b>subscription</b>" tb-help-popup="widget/editor/widget_js_subscription_object"></span> are assigned to **$scope** and become accessible within HTML template.
 
-Inside the HTML, a special [***ngFor**{:target="_blank"}](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available alarm **dataKeys** of **alarmSource** and render corresponding columns.
+Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available alarm **dataKeys** of **alarmSource** and render corresponding columns.
 
 The table rows are rendered by iterating over **alarms** array and corresponding cells rendered by iterating over **dataKeys**.
 
-The function **getAlarmValue** is fetching alarm value and formatting **createdTime** alarm property using a [DatePipe{:target="_blank"}](https://angular.io/api/common/DatePipe) angular pipe accessible via **date** property of **ctx**.
+The function **getAlarmValue** is fetching alarm value and formatting **createdTime** alarm property using a [DatePipe](https://angular.io/api/common/DatePipe) angular pipe accessible via **date** property of **ctx**.
 
 The function **getAlarmCellStyle** is used to assign custom cell styles for each alarm cell.<br>In this example, we introduced new settings property called **alarmSeverityColorFunction** that contains function body returning color depending on alarm severity.
 

@@ -3,10 +3,10 @@
 <div class="divider"></div>
 <br/>
 
-All widget related JavaScript code according to the [Widget API{:target="_blank"}](${siteBaseUrl}/docs${docPlatformPrefix}/user-guide/contribution/widgets-development/#basic-widget-api).
+All widget related JavaScript code according to the [Widget API](${siteBaseUrl}/docs${docPlatformPrefix}/user-guide/contribution/widgets-development/#basic-widget-api).
 The built-in variable **self** is a reference to the widget instance.<br>
 Each widget function should be defined as a property of the **self** variable.
-**self** variable has property **ctx** of type [WidgetContext{:target="_blank"}](https://github.com/thingsboard/thingsboard/blob/5bb6403407aa4898084832d6698aa9ea6d484889/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L107) - a reference to widget context that has all necessary API and data used by widget instance.
+**self** variable has property **ctx** of type WidgetContext - a reference to widget context that has all necessary API and data used by widget instance.
 
 In order to implement a new widget, the following JavaScript functions should be defined *(Note: each function is optional and can be implemented according to  widget specific behaviour):*
 
@@ -20,8 +20,8 @@ In order to implement a new widget, the following JavaScript functions should be
 | ``` onDestroy() ```               | Called when widget element is destroyed. Should be used to cleanup all resources if necessary.                                                                                                                                                                                                                                                                                                                                        |
 | ``` getSettingsForm() ```         | Optional function returning widget settings form array as alternative to **Settings form** tab of settings section.                                                                                                                                                                                                                                                                                                                   |
 | ``` getDataKeySettingsForm() ```  | Optional function returning particular data key settings form array as alternative to **Data key settings form** tab of settings section.                                                                                                                                                                                                                                                                                             |
-| ``` typeParameters() ```          | Returns [WidgetTypeParameters{:target="_blank"}](https://github.com/thingsboard/thingsboard/blob/2627fe51d491055d4140f16617ed543f7f5bd8f6/ui-ngx/src/app/shared/models/widget.models.ts#L151) object describing widget datasource parameters. See <span trigger-style="fontSize: 16px;" trigger-text="<b>Type parameters object</b>" tb-help-popup="widget/editor/widget_js_type_parameters_object"></span>                           |            |
-| ``` actionSources() ```           | Returns map describing available widget action sources ([WidgetActionSource{:target="_blank"}](https://github.com/thingsboard/thingsboard/blob/2627fe51d491055d4140f16617ed543f7f5bd8f6/ui-ngx/src/app/shared/models/widget.models.ts#L121)) used to define user actions. See <span trigger-style="fontSize: 16px;" trigger-text="<b>Action sources object</b>" tb-help-popup="widget/editor/widget_js_action_sources_object"></span> |
+| ``` typeParameters() ```          | Returns WidgetTypeParameters object describing widget datasource parameters. See <span trigger-style="fontSize: 16px;" trigger-text="<b>Type parameters object</b>" tb-help-popup="widget/editor/widget_js_type_parameters_object"></span>                           |            |
+| ``` actionSources() ```           | Returns map describing available widget action sources (WidgetActionSource) used to define user actions. See <span trigger-style="fontSize: 16px;" trigger-text="<b>Action sources object</b>" tb-help-popup="widget/editor/widget_js_action_sources_object"></span> |
 | ~~getSettingsSchema()~~           | **Deprecated**. Use getSettingsForm() function.                                                                                                                                                                                                                                                                                                                                                                                       |
 | ~~getDataKeySettingsSchema()~~    | **Deprecated**. Use getDataKeySettingsForm() function.                                                                                                                                                                                                                                                                                                                                                                                |
 
@@ -30,7 +30,7 @@ In order to implement a new widget, the following JavaScript functions should be
 ##### Creating simple widgets 
 
 The tutorials below show how to create minimal widgets of each type.
-In order to minimize the amount of code, the Angular framework will be used, on which ThingsBoard UI is actually based.
+In order to minimize the amount of code, the Angular framework will be used, on which Senseteq UI is actually based.
 By the way, you can always use pure JavaScript or jQuery API in your widget code.
 
 <br>
@@ -120,18 +120,18 @@ Below are some examples demonstrating how external JavaScript libraries or exist
 ##### Widget code debugging tips
 
 The most simple method of debugging is Web console output.
-Just place [**console.log(...)**{:target="_blank"}](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) function inside any part of widget JavaScript code.
+Just place [**console.log(...)**](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) function inside any part of widget JavaScript code.
 Then click **Run** button to restart widget code and observe debug information in the Web console.
 
 Another and most effective method of debugging is to invoke browser debugger.
-Put [**debugger;**{:target="_blank"}](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement into the place of widget code you are interested in and then click **Run** button to restart widget code.
+Put [**debugger;**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement into the place of widget code you are interested in and then click **Run** button to restart widget code.
 Browser debugger (if enabled) will automatically pause code execution at the debugger statement and you will be able to analyze script execution using browser debugging tools.
 
 <div class="divider"></div>
 
 ##### Further reading
 
-For more information read  [Widgets Development Guide{:target="_blank"}](${siteBaseUrl}/docs${docPlatformPrefix}/user-guide/contribution/widgets-development).
+For more information read  [Widgets Development Guide](${siteBaseUrl}/docs${docPlatformPrefix}/user-guide/contribution/widgets-development).
 
 <br>
 <br>
