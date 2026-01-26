@@ -9,7 +9,6 @@
     "name": "Home page widgets"
   },
   "widgetTypeFqns": [
-    "home_page_widgets.getting_started",
     "home_page_widgets.quick_links",
     "home_page_widgets.documentation_links",
     "home_page_widgets.dashboards",
