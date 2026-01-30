@@ -20,7 +20,7 @@ import { entityIdHref, serviceCompletions } from '@shared/models/ace/service-com
 export const timewindowCompletion: TbEditorCompletion = {
   description: 'Timewindow configuration object',
   meta: 'property',
-  type: 'Timewindow',
+  type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L80" target="_blank">Timewindow</a>',
   children: {
     displayValue: {
       description: 'Current timewindow display value.',
@@ -50,7 +50,7 @@ export const timewindowCompletion: TbEditorCompletion = {
     realtime: {
       description: 'Realtime timewindow configuration object.',
       meta: 'property',
-      type: 'IntervalWindow',
+      type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L39" target="_blank">IntervalWindow</a>',
       children: {
         interval: {
           description: 'Timewindow aggregation interval in milliseconds',
@@ -67,7 +67,7 @@ export const timewindowCompletion: TbEditorCompletion = {
     history: {
       description: 'History timewindow configuration object.',
       meta: 'property',
-      type: 'HistoryWindow',
+      type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L49" target="_blank">HistoryWindow</a>',
       children: {
         historyType: {
           description: 'History timewindow type (0 - last interval, 1 - fixed)',
@@ -87,7 +87,7 @@ export const timewindowCompletion: TbEditorCompletion = {
         fixedTimewindow: {
           description: 'Fixed history timewindow configuration object',
           meta: 'property',
-          type: 'FixedWindow',
+          type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L44" target="_blank">FixedWindow</a>',
           children: {
             startTimeMs: {
               description: 'Timewindow start time in UTC milliseconds',
@@ -106,7 +106,7 @@ export const timewindowCompletion: TbEditorCompletion = {
     aggregation: {
       description: 'Timewindow aggregation configuration object.',
       meta: 'property',
-      type: 'Aggregation',
+      type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L74" target="_blank">Aggregation</a>',
       children: {
         interval: {
           description: 'Aggregation interval in milliseconds',
@@ -116,7 +116,7 @@ export const timewindowCompletion: TbEditorCompletion = {
         type: {
           description: 'Aggregation type',
           meta: 'property',
-          type: 'AggregationType'
+          type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L54" target="_blank">AggregationType</a>'
         },
         limit: {
           description: 'Maximum allowed datapoints when aggregation is disabled (<code>AggregationType == \'NONE\'</code>)',
@@ -133,7 +133,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
     ctx: {
       description: 'A reference to widget context that has all necessary API<br>and data used by widget instance.',
       meta: 'object',
-      type: 'WidgetContext',
+      type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L83" target="_blank">WidgetContext</a>',
       children: {
         ...{
           $container: {
@@ -144,7 +144,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           $scope: {
             description: 'Reference to the current widget component.<br>Can be used to access/modify component properties when widget is built using Angular approach.',
             meta: 'property',
-            type: 'IDynamicWidgetComponent'
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L274" target="_blank">IDynamicWidgetComponent</a>'
           },
           width: {
             description: 'Current width of widget container in pixels.',
@@ -169,7 +169,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           widgetConfig: {
             description: 'Common widget configuration containing properties such as <code>color</code> (text color), <code>backgroundColor</code> (widget background color), etc.',
             meta: 'property',
-            type: 'WidgetConfig',
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L341" target="_blank">WidgetConfig</a>',
             children: {
               title: {
                 description: 'Widget title.',
@@ -234,17 +234,17 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
               legendConfig: {
                 description: 'Legend configuration.',
                 meta: 'property',
-                type: 'LegendConfig',
+                type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L198" target="_blank">LegendConfig</a>',
                 children: {
                   position: {
                     description: 'Legend position. Possible values: <code>\'top\', \'bottom\', \'left\', \'right\'</code>',
                     meta: 'property',
-                    type: 'LegendPosition',
+                    type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L182" target="_blank">LegendPosition</a>',
                   },
                   direction: {
                     description: 'Legend direction. Possible values: <code>\'column\', \'row\'</code>',
                     meta: 'property',
-                    type: 'LegendDirection',
+                    type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L170" target="_blank">LegendDirection</a>',
                   },
                   showMin: {
                     description: 'Whether to display aggregated min values.',
@@ -333,12 +333,12 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
               alarmSource: {
                 description: 'Configured alarm source for alarm widget type.',
                 meta: 'property',
-                type: 'Datasource'
+                type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250" target="_blank">Datasource</a>'
               },
               alarmSearchStatus: {
                 description: 'Configured default alarm search status for alarm widget type.',
                 meta: 'property',
-                type: 'AlarmSearchStatus'
+                type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L41" target="_blank">AlarmSearchStatus</a>'
               },
               alarmsPollingInterval: {
                 description: 'Configured alarms polling interval for alarm widget type.',
@@ -358,7 +358,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
               datasources: {
                 description: 'Array of configured widget datasources.',
                 meta: 'property',
-                type: 'Array&lt;Datasource&gt;'
+                type: 'Array&lt;<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250" target="_blank">Datasource</a>&gt;'
               }
             }
           },
@@ -371,17 +371,17 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           datasources: {
             description: 'Array of resolved widget datasources.',
             meta: 'property',
-            type: 'Array&lt;Datasource&gt;'
+            type: 'Array&lt;<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250" target="_blank">Datasource</a>&gt;'
           },
           data: {
             description: 'Array of latest datasources data.',
             meta: 'property',
-            type: 'Array&lt;DatasourceData&gt;'
+            type: 'Array&lt;<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275" target="_blank">DatasourceData</a>&gt;'
           },
           timeWindow: {
             description: 'Current widget timewindow (applicable for timeseries widgets).',
             meta: 'property',
-            type: 'WidgetTimewindow'
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L104" target="_blank">WidgetTimewindow</a>'
           },
           units: {
             description: 'Optional property defining units text of values displayed by widget. Useful for simple widgets like cards or gauges.',
@@ -396,7 +396,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           currentUser: {
             description: 'Current user object.',
             meta: 'property',
-            type: 'AuthUser',
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/user.model.ts#L45" target="_blank">AuthUser</a>',
             children: {
               sub: {
                 description: 'User subject (email).',
@@ -446,7 +446,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
               authority: {
                 description: 'User authority. Possible values: SYS_ADMIN, TENANT_ADMIN, CUSTOMER_USER',
                 meta: 'property',
-                type: 'Authority'
+                type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/authority.enum.ts#L17" target="_blank">Authority</a>'
               }
             }
           },
@@ -471,12 +471,12 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           defaultSubscription: {
             description: 'Default widget subscription object contains all subscription information,<br>including current data, according to the widget type.',
             meta: 'property',
-            type: 'IWidgetSubscription'
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L220" target="_blank">IWidgetSubscription</a>'
           },
           timewindowFunctions: {
             description: 'Object with timewindow functions used to manage widget data time frame. Can by used by Time-series or Alarm widgets.',
             meta: 'property',
-            type: 'TimewindowFunctions',
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45" target="_blank">TimewindowFunctions</a>',
             children: {
               onUpdateTimewindow: {
                 description: 'This function can be used to update current subscription time frame<br>to historical one identified by <code>startTimeMs</code> and <code>endTimeMs</code> arguments.',
@@ -503,7 +503,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           controlApi: {
             description: 'Object that provides API functions for RPC (Control) widgets.',
             meta: 'property',
-            type: 'RpcApi',
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L58" target="_blank">RpcApi</a>',
             children: {
               sendOneWayCommand: {
                 description: 'Sends one way (without response) RPC command to the device.',
@@ -588,7 +588,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           actionsApi: {
             description: 'Set of API functions to work with user defined actions.',
             meta: 'property',
-            type: 'WidgetActionsApi',
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L67" target="_blank">WidgetActionsApi</a>',
             children: {
               getActionDescriptors: {
                 description: 'Get list of action descriptors for provided <code>actionSourceId</code>.',
@@ -602,7 +602,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                 ],
                 return: {
                   description: 'The list of action descriptors',
-                  type: 'Array&lt;WidgetActionDescriptor&gt;'
+                  type: 'Array&lt;<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L323" target="_blank">WidgetActionDescriptor</a>&gt;'
                 }
               },
               handleWidgetAction: {
@@ -617,7 +617,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                   {
                     name: 'descriptor',
                     description: 'An action descriptor.',
-                    type: 'WidgetActionDescriptor'
+                    type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L323" target="_blank">WidgetActionDescriptor</a>'
                   },
                   {
                     name: 'entityId',
@@ -638,7 +638,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
           stateController: {
             description: 'Reference to Dashboard state controller, providing API to manage current dashboard state.',
             meta: 'property',
-            type: 'IStateController',
+            type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L121" target="_blank">IStateController</a>',
             children: {
               openState: {
                 description: 'Navigate to new dashboard state.',
@@ -652,7 +652,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                   {
                     name: 'params',
                     description: 'An object with state parameters to use by the new state.',
-                    type: 'StateParams',
+                    type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L111" target="_blank">StateParams</a>',
                     optional: true
                   },
                   {
@@ -670,7 +670,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                   {
                     name: 'id',
                     description: 'An array state object of the target dashboard state.',
-                    type: 'Array StateObject',
+                    type: 'Array <a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L140" target="_blank">StateObject</a>',
                   },
                   {
                     name: 'openRightLayout',
@@ -693,7 +693,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                   {
                     name: 'params',
                     description: 'An object with state parameters to update current state parameters.',
-                    type: 'StateParams',
+                    type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L111" target="_blank">StateParams</a>',
                     optional: true
                   },
                   {
@@ -717,7 +717,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                 meta: 'function',
                 return: {
                   description: 'current dashboard state parameters.',
-                  type: 'StateParams'
+                  type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L111" target="_blank">StateParams</a>'
                 }
               },
               getStateParamsByStateId: {
@@ -732,7 +732,7 @@ export const widgetContextCompletionsWithSettings = (settingsCompletions?: TbEdi
                 ],
                 return: {
                   description: 'current dashboard state parameters.',
-                  type: 'StateParams'
+                  type: '<a href="https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L111" target="_blank">StateParams</a>'
                 }
               }
             }

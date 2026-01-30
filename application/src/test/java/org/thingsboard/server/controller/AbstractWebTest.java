@@ -60,7 +60,6 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.context.WebApplicationContext;
@@ -350,14 +349,7 @@ public abstract class AbstractWebTest extends AbstractInMemoryStorageTest {
 
         if (this.mockMvc == null) {
             this.mockMvc = webAppContextSetup(webApplicationContext)
-                    .apply(springSecurity())
-                    // conditional printing of non 2xx responses
-                    .alwaysDo(result -> {
-                        if (result.getResponse().getStatus() >= 400) {
-                            MockMvcResultHandlers.log().handle(result);
-                        }
-                    })
-                    .build();
+                    .apply(springSecurity()).build();
         }
         loginSysAdmin();
 
@@ -431,7 +423,7 @@ public abstract class AbstractWebTest extends AbstractInMemoryStorageTest {
 
         jdbcTemplate.execute("TRUNCATE TABLE notification");
 
-        log.debug("Executed web test teardown");
+        log.info("Executed web test teardown");
     }
 
     private void verifyNoTenantsLeft() throws Exception {

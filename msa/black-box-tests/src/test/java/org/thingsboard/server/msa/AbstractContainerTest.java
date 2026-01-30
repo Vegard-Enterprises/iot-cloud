@@ -44,6 +44,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.function.Consumer;
 
+
 @Slf4j
 @Listeners(TestListener.class)
 public abstract class AbstractContainerTest {
@@ -169,14 +170,19 @@ public abstract class AbstractContainerTest {
         DeviceProfileProvisionConfiguration provisionConfiguration;
         String testProvisionDeviceKey = TEST_PROVISION_DEVICE_KEY;
         deviceProfile.setProvisionType(provisionType);
-        provisionConfiguration = switch (provisionType) {
-            case ALLOW_CREATE_NEW_DEVICES -> new AllowCreateNewDevicesDeviceProfileProvisionConfiguration(TEST_PROVISION_DEVICE_SECRET);
-            case CHECK_PRE_PROVISIONED_DEVICES -> new CheckPreProvisionedDevicesDeviceProfileProvisionConfiguration(TEST_PROVISION_DEVICE_SECRET);
-            default -> {
+        switch(provisionType) {
+            case ALLOW_CREATE_NEW_DEVICES:
+                provisionConfiguration = new AllowCreateNewDevicesDeviceProfileProvisionConfiguration(TEST_PROVISION_DEVICE_SECRET);
+                break;
+            case CHECK_PRE_PROVISIONED_DEVICES:
+                provisionConfiguration = new CheckPreProvisionedDevicesDeviceProfileProvisionConfiguration(TEST_PROVISION_DEVICE_SECRET);
+                break;
+            default:
+            case DISABLED:
                 testProvisionDeviceKey = null;
-                yield new DisabledDeviceProfileProvisionConfiguration(null);
-            }
-        };
+                provisionConfiguration = new DisabledDeviceProfileProvisionConfiguration(null);
+                break;
+        }
         DeviceProfileData deviceProfileData = deviceProfile.getProfileData();
         deviceProfileData.setProvisionConfiguration(provisionConfiguration);
         deviceProfile.setProfileData(deviceProfileData);

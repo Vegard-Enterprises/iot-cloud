@@ -44,7 +44,7 @@ export class MobileAppConfigurationDialogComponent extends DialogComponent<Mobil
   notShowAgain = false;
   showDontShowAgain: boolean;
 
-  gitRepositoryLink = 'git clone -b master <your-repo-url>';
+  gitRepositoryLink = 'git clone -b master https://github.com/thingsboard/flutter_thingsboard_app.git';
   flutterRunCommand = `flutter run --dart-define-from-file ${this.fileName}.json`;
 
   constructor(protected store: Store<AppState>,

@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicInteger;
 import static org.thingsboard.server.dao.service.OtaPackageServiceTest.TARGET_FW_VERSION;
 import static org.thingsboard.server.dao.service.OtaPackageServiceTest.TITLE;
 
@@ -136,7 +137,6 @@ public class FwLwM2MDevice extends BaseInstanceEnabler implements Destroyable {
     @Override
     public void destroy() {
         scheduler.shutdownNow();
-        this.leshanClient = null;
     }
 
     private void startDownloading() {

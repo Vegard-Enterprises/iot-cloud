@@ -48,7 +48,7 @@ export class AppComponent {
               private domSanitizer: DomSanitizer,
               private authService: AuthService) {
 
-    console.log(`Senseteq Version: ${env.tbVersion}`);
+    console.log(`ThingsBoard Version: ${env.tbVersion}`);
 
     this.matIconRegistry.addSvgIconResolver((name, namespace) => {
       if (namespace === 'mdi') {

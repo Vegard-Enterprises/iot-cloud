@@ -15,13 +15,19 @@
 ///
 
 import { Injectable } from '@angular/core';
-import { RequestConfig } from './http-utils';
+import { defaultHttpOptionsFromConfig, RequestConfig } from './http-utils';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GitHubService {
+
+  constructor(
+    private http: HttpClient
+  ) { }
 
   public getGitHubStar(config?: RequestConfig): Observable<number> {
     return of(0);
